@@ -22,8 +22,8 @@ class QuizBrain:
     def check_answer(self):
         user_input = QuizBrain.next_question().lower()
         if user_input == self.current_answer:
-            print("Correct answer")
             self.score += 1
+            return True
         else:
-            print("Wrong answer")
-        print(f"score: {self.score}")
+            return False
+        # print(f"score: {self.score}")
