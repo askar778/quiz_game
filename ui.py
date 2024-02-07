@@ -42,7 +42,7 @@ class QuizInterface:
         if self.quiz.still_have_questions():
             self.true_button.config(state="normal")
             self.false_button.config(state="normal")
-            self.canvas.itemconfig(self.question_text, text=self.quiz.next_question() + self.quiz.current_answer)
+            self.canvas.itemconfig(self.question_text, text=self.quiz.next_question())
         else:
             self.canvas.itemconfig(self.question_text, text= f"QUIZ COMPLETED\nYour Score is {self.quiz.score}")
             self.true_button.config(state="disabled")
